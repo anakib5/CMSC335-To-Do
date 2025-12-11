@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<h1 style="text-align:center;">Add a new reminder</h1>
+
+<div class="add-form-container">
+  <form action="/add" method="POST">
+
+    <label>Reminder:</label><br>
+    <input type="text" name="text" placeholder="Enter a reminder..." required>
+    <br><br>
+
+    <label>Do by:</label><br>
+    <input type="date" name="doBy">
+    <br><br>
+
+    <label>Urgency:</label><br>
+    <select name="urgency">
+      <option value="">Select urgency</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Save</button>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<div class="quote-container">
+  <h1>Motivational Quote</h1>
+
+  <% if (quote.error) { %>
+    <!-- Error banner -->
+    <p class="quote-error"><%= quote.error %></p>
+  <% } %>
+
+  <!-- ALWAYS show quote text if it exists -->
+  <% if (quote.text) { %>
+    <p class="quote-text">"<%= quote.text %>"</p>
+
+    <% if (quote.author) { %>
+      <p class="quote-author">— <%= quote.author %></p>
+    <% } else { %>
+      <p class="quote-author">— Unknown</p>
+    <% } %>
+
+  <% } else { %>
+    <p class="quote-text">No quote available.</p>
+  <% } %>
+
+  <a href="/quote" class="quote-refresh">Get another quote</a>
+</div>
+
+<%- include('partials/footer') %>

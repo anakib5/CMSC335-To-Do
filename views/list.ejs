@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+
+<h1>Your reminders</h1>
+
+<table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th>Reminder</th>
+      <th>Do By</th>
+      <th>Urgency</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% todos.forEach(t => { %>
+      <tr>
+  <td><%= t.text %></td>
+
+  <td>
+    <% if (t.doBy) { %>
+      <%= t.doBy %>
+    <% } else { %>
+      —
+    <% } %>
+  </td>
+
+  <td>
+    <% if (t.urgency === "Low") { %>
+      <span class="urgency-low"><%= t.urgency %></span>
+    <% } else if (t.urgency === "Medium") { %>
+      <span class="urgency-medium"><%= t.urgency %></span>
+    <% } else if (t.urgency === "High") { %>
+      <span class="urgency-high"><%= t.urgency %></span>
+    <% } else { %>
+      —
+    <% } %>
+  </td>
+
+  <td>
+    <form action="/delete/<%= t._id %>" method="POST" style="display:inline;">
+      <button type="submit">Delete</button>
+    </form>
+  </td>
+</tr>
+
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>

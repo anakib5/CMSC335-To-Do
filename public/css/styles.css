@@ -1,0 +1,162 @@
+body {
+  background-color: #f5f7ff;
+  color: #333;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+nav {
+  background-color: #4c63d2;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 26px;
+  color: #222;
+}
+
+form input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 8px 14px;
+  font-size: 16px;
+  background-color: #4c63d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+table th {
+  background-color: #4c63d2;
+  color: white;
+  padding: 10px;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f3ff;
+}
+
+.urgency-low {
+  color: #0a7a13;
+  font-weight: bold;
+}
+
+.urgency-medium {
+  color: #b38f00;
+  font-weight: bold;
+}
+
+.urgency-high {
+  color: #c80000;
+  font-weight: bold;
+}
+
+
+.add-form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.add-form-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.add-form-container input,
+.add-form-container select,
+.add-form-container button {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+.quote-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.quote-container h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.quote-text {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.quote-author {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.quote-refresh {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 16px;
+  background-color: #4c63d2;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.quote-refresh:hover {
+  opacity: 0.9;
+}
+
+.quote-error {
+  color: #c80000; /* red */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
