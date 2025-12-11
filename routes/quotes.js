@@ -10,7 +10,6 @@ const fallbackQuotes = [
 
 router.get('/quote', async (req, res) => {
   try {
-    // NEW API: ZenQuotes
     const response = await axios.get('https://zenquotes.io/api/random');
 
     // ZenQuotes returns an array like: [ { q: "...", a: "..." } ]

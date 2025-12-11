@@ -4,11 +4,9 @@
   <h1>Motivational Quote</h1>
 
   <% if (quote.error) { %>
-    <!-- Error banner -->
     <p class="quote-error"><%= quote.error %></p>
   <% } %>
 
-  <!-- ALWAYS show quote text if it exists -->
   <% if (quote.text) { %>
     <p class="quote-text">"<%= quote.text %>"</p>
 
